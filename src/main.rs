@@ -50,6 +50,4 @@ if __name__ == "__main__":
     main_file
         .write_all(main_file_content.as_bytes())
         .expect("Failed to write to main file");
-
-    
 }
