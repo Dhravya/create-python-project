@@ -1,6 +1,6 @@
 [package]
 name = "create-python-project"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "Create a Python project automatically with rust (like create-react-app but for python)"
 license = "MIT"
