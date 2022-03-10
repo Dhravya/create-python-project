@@ -1,5 +1,21 @@
 use std::{io::Write, process::Command};
 fn main() {
+    let args = std::env::args().collect::<Vec<_>>();
+    println!("{:?}", args);
+    if args.len() >= 2{    
+         // Create a new folder and do everything inside
+        let new_dir = String::from(args[1].clone());
+        println!("{}", new_dir);
+        // Create the folder
+        std::fs::create_dir(&new_dir).unwrap(); 
+        // Change the current directory to the new one
+        std::env::set_current_dir(&new_dir).unwrap();
+    }
+    else{
+        println!("Please provide a name for the folder");
+        std::process::exit(1);
+    }
+
     let mut activate_command: String = String::from("source venv/bin/activate");
     if std::env::consts::OS == "windows" {
         activate_command = String::from("venv\\Scripts\\activate");
