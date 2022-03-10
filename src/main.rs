@@ -44,7 +44,7 @@ fn main() {
     let mut gitignore_file =
         std::fs::File::create(".gitignore").expect("Failed to create gitignore file");
 
-    let gitignore_content = String::from("venv/\n.env");
+    let gitignore_content = String::from("env/\n.env");
     gitignore_file
         .write_all(gitignore_content.as_bytes())
         .expect("Failed to write to gitignore file");
