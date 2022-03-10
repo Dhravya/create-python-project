@@ -26,7 +26,7 @@ fn main() {
     Command::new("python")
         .arg("-m")
         .arg("venv")
-        .arg("venv")
+        .arg("env")
         .output()
         .expect("Failed to create virtual environment");
 
